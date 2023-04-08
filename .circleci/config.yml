@@ -6,10 +6,11 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+          
     steps:
       - checkout
       - run: echo "A first hello"
-      -run: sleep 25
+      - run: sleep 25
   two:
     docker:
       - image: cimg/ruby:2.6.8
